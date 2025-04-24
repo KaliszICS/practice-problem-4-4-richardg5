@@ -1,6 +1,5 @@
 public final class MyUtilityClass {
 
-  //constants
   final static int MAXIMUM = 3000;
   
   //private constructor
