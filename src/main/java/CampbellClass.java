@@ -30,6 +30,15 @@ public class CampbellClass {
     }
 
     /**
+     * Converts a char into a String
+     * @param convert the char value to be converted to a String
+     * @return a String representation of convert
+     */
+    public static String convertString(char convert) {
+        return Character.toString(convert);
+    }
+
+    /**
      * Converts a boolean into a String
      * @param convert the boolean value to be converted to a String
      * @return a String representation of convert
@@ -39,21 +48,30 @@ public class CampbellClass {
     }
 
     /**
-     * Converts a measure of inches to centimeters
-     * @param inches an int representing the measure in inches
+     * Converts a measure of meter to centimeters
+     * @param meters an int representing the measure in meters
      * @return an int representing the same measure but in centimeters
      */
-    public static int convertMetersToCenti(int inches) {
-        return (int) (inches * 2.5);
+    public static int convertMetersToCenti(int meters) {
+        return meters * 100;
     }
 
     /**
      * Converts a measure of inches to centimeters
-     * @param inches a double representing the measure in inches
+     * @param meters a double representing the measure in inches
      * @return a double representing the same measure but in centimeters
      */
-    public static double convertMetersToCenti(double inches) {
-        return inches * 2.5;
+    public static double convertMetersToCenti(double meters) {
+        return meters * 100;
+    }
+
+    /**
+     * Removes all non-letter characters from a String
+     * @param toRemove a String to have its non-letter characters to be removed
+     * @return a String containing all remaining letter characters
+     */
+    public static String removeNonAlpha(String toRemove) {
+        return toRemove.replaceAll("[^A-Za-z]", "");
     }
 
     /**
@@ -64,8 +82,8 @@ public class CampbellClass {
      */
     public static String removeNonAlpha(String toRemove, boolean isUpper) {
         if (isUpper) {
-            return toRemove.replaceAll("[^A-Za-z]", "").toUpperCase();
+            return removeNonAlpha(toRemove).toUpperCase();
         }
-        return toRemove.replaceAll("[^A-Za-z]", "").toLowerCase();
+        return removeNonAlpha(toRemove).toLowerCase();
     }
 }
