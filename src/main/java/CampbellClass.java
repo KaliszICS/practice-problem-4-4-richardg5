@@ -71,6 +71,7 @@ public class CampbellClass {
      * @return a String containing all remaining letter characters
      */
     public static String removeNonAlpha(String toRemove) {
+        // "[^A-Za-z]" matches all non-uppercase letters and all non-lowercase letters
         return toRemove.replaceAll("[^A-Za-z]", "");
     }
 
