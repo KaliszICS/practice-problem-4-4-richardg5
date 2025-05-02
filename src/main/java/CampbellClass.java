@@ -3,7 +3,7 @@
  * @author Richard Gao
  * @version 1.0.0
  */
-public class CampbellClass {
+public final class CampbellClass {
     /**
      * Private constructor to prevent instantiating utility class
      */
